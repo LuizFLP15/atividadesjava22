@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu JS</title>
+
+    <style>
+
+        img {
+            width: 200px;
+            border: 2px solid black;
+        }
+
+    </style>
+
+</head>
+<body>
+<p id="paragrafo">Luiz Moura.</p>
+<button id="botao">Mudar Texto</button>
+<input type="text" id="entrada" placeholder="escreva">
+<p id="resultado"></p>
+<img id="imagem" src="https://i0.wp.com/www.gibizilla.com.br/wp-content/uploads/2021/02/Darth-Vader.jpg?fit=1536%2C864&ssl=1" alt="Imagem">
+<script>
+document.getElementById("botao").addEventListener("click", function() {
+    document.getElementById("paragrafo").textContent = "texto trocado";});
+document.getElementById("entrada").addEventListener("input", function(e) {
+    document.getElementById("resultado").textContent = e.target.value;});
+document.getElementById("imagem").addEventListener("mouseover", function() {
+    this.style.border = "5px solid red";});
+document.getElementById("imagem").addEventListener("mouseout", function() {
+    this.style.border = "2px solid black";});
+</script>
+
+</body>
+</html>
